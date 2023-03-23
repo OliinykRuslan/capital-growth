@@ -111,30 +111,13 @@ blockquote, p, h1, h2 {
 .header {
     padding: 12px 0;
 }
-.header .logo {
+/* .header .logo {
     max-width: 88px;
-}
+} */
 .header .logo img {
-    max-width: 100%;
-}
-.header .inner-wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.header ul {
-    display: none;
-}
-.header ul li {
-    padding-left: 40px;
-}
-.header ul li a {
-    color: #303030;
-    font-weight: 500;
-    font-size: 20px;
-}
-.header ul li a:hover {
-    color: var(--primary-color);
+    width: 100%;
+    max-width: 88px;
+    margin: 0 auto;
 }
 .hero {
     background: url('../images/hero.png') no-repeat 50%;
@@ -429,7 +412,7 @@ blockquote, p, h1, h2 {
 }
 
 @media (min-width: 575px) {
-    .header .logo {
+    .header .logo img {
         max-width: 160px;
     }
     .footer .logo {
@@ -462,12 +445,6 @@ blockquote, p, h1, h2 {
 @media (min-width: 768px) {
     .header {
         padding: 18px 0;
-    }
-    .header .inner-wrap {
-        justify-content: space-between;
-    }
-    .header ul {
-        display: flex;
     }
     .hero {
         font-size: 20px;
