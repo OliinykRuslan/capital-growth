@@ -56,7 +56,9 @@ h5,
 h6 {
     margin: 0;
 }
-.btn {
+.btn,
+.modal-form .btn {
+    font-family: 'Barlow', sans-serif;
     display: block;
     border-radius: 39px;
     padding: 20px 17px;
@@ -73,10 +75,15 @@ h6 {
     overflow: hidden;
     position: relative;
     text-align: center;
+    cursor: pointer;
+    transition: .2s all;
 }
 .btn:hover {
     opacity: 1;
     color: #303030;
+}
+.modal-form .btn:hover {
+    background-color: #ffb400;
 }
 .btn::after {
     background: #fff;
@@ -471,7 +478,7 @@ h6 {
     color: #181818;
     font-weight: 700;
     font-size: 20px;
-    padding: 0 15px 20px;
+    padding: 0 15px;
     line-height: 1.5;
 }
 .modal-body {
@@ -486,6 +493,7 @@ h6 {
     gap: 1rem;
 }
 .modal-form input {
+    width: 100%;
     background-color: #F6F6F6;
     border: 2px solid #DDDDDD;
     border-radius: 3px;
@@ -493,9 +501,9 @@ h6 {
     font-size: 18px;
     padding: 17px;
 }
-.modal-form .btn {
-    margin-top: 1rem;
-}
+/* .modal-form .btn {
+    margin: 1rem auto 0;
+} */
 
 @media (min-width: 575px) {
     .header .logo img {
@@ -553,7 +561,8 @@ h6 {
     .title {
         font-size: 44px;
     }
-    .btn {
+    .btn,
+    .modal-form .btn  {
         font-size: 22px;
         max-width: 370px;
         padding: 29.5px 17px;
@@ -658,7 +667,7 @@ h6 {
     }
     .modal-title {
         font-size: 24px;
-        padding: 0 15px 28px;
+        padding: 0 15px 12px;
     }
     .modal-body {
         text-align:center;
