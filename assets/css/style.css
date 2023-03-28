@@ -39,13 +39,21 @@ button, button:hover {
     -webkit-transition: all .25s;
     transition: all .25s;
     outline: none;
+    cursor: pointer;
 }
 ol, ul {
     padding: 0;
     margin: 0;
     list-style-type: none;
 }
-blockquote, p, h1, h2 {
+blockquote,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
 }
 .btn {
@@ -130,7 +138,8 @@ blockquote, p, h1, h2 {
     line-height: 1.5;
 }
 .hero .container {
-    max-width: 730px;
+    /* max-width: 730px; */
+    max-width: 810px;
 }
 .subtitle {
     font-size: 15px;
@@ -142,7 +151,8 @@ blockquote, p, h1, h2 {
     margin: 0 0 18px;
 }
 .hero .description {
-    margin-bottom: 26px;
+    margin: 0 auto 26px;
+    max-width: 710px;
 }
 .title {
     font-size: 20px;
@@ -242,11 +252,32 @@ blockquote, p, h1, h2 {
     margin-top: 50px;
 }
 
+.conversion-page .quote-wrap {
+    gap: 3.7rem;
+}
+.conversion-page .quote-ico {
+    margin: 0 auto 25px;
+}
+.conversion-page .quote-section {
+    text-align: left;
+}
+.conversion-page .quote-section .title {
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+.conversion-page .quote-section {
+    font-size: 18px;
+}
+.conversion-page .author {
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 25px;
+}
+
 /* our-work-section */
 
 .our-work-section {
     padding: 35px 0 16px;
-    border-bottom: 1px solid #DBDBDB;
     margin: 0 20px;
 }
 .our-work-section .logo-wrap {
@@ -269,6 +300,7 @@ blockquote, p, h1, h2 {
 
 .result-section {
     padding: 55px 0 53px;
+    border-top: 1px solid #DBDBDB;
 }
 .result-section .title {
     max-width: 820px;
@@ -298,6 +330,60 @@ blockquote, p, h1, h2 {
     max-height: 58px;
     max-width: 64px;
     margin: 0 auto 22px;
+}
+
+/* conversion-page */
+/* upsell-section */
+
+.upsell-section {
+    text-align: center;
+    padding: 0 0 60px;
+}
+.upsell-revenue-img img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+.plug-play-section {
+    padding: 52px 0;
+}
+.plug-play-section .title {
+    max-width: 730px;
+    margin: 0 auto;
+    position: relative;
+    background-image: url('../images/underline.svg');
+    background-repeat: no-repeat;
+    background-position: 100% calc(100% - 38px);
+    background-size: 58%;
+    padding-bottom: 50px;
+}
+.underline-ico {
+    position: absolute;
+}
+.plug-play-wrap {
+    display: grid;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+.plug-play-wrap .description-wrap {
+    max-width: 400px;
+    margin: 0 auto;
+    order: 2;
+}
+.plug-play-wrap .description {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.plug-play-img {
+    order: 1;
+}
+.plug-play-img img {
+    max-width: 100%;
 }
 
 /* footer */
@@ -421,6 +507,9 @@ blockquote, p, h1, h2 {
     .our-work-section {
         padding: 73px 0 80px;
     }
+    .conversion-page .our-work-section {
+        padding: 73px 0 45px;
+    }
     .our-work-section .logo-wrap {
         grid-template-columns: repeat(5, minmax(0, 1fr));
     }
@@ -455,7 +544,7 @@ blockquote, p, h1, h2 {
         margin: 0 0 31px;
     }
     .hero .description {
-        margin-bottom: 38px;
+        margin: 0 auto 38px;
     }
     .subtitle {
         font-size: 26px;
@@ -497,7 +586,15 @@ blockquote, p, h1, h2 {
         margin: 0 20px;
         text-align: left;
     }
-    .quote-wrap {
+    .quote-section .title {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .quote-section .btn {
+        margin-top: 88px;
+    }
+    .quote-wrap,
+    .conversion-page .quote-wrap {
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 2rem;
     }
@@ -510,8 +607,12 @@ blockquote, p, h1, h2 {
         justify-content: flex-start;
         gap: 1rem;
     }
-    .quote-section .btn {
-        margin-top: 88px;
+    .conversion-page .quote-section .title {
+        font-size: 44px;
+        margin-bottom: 52px;
+    }
+    .conversion-page .quote-section {
+        padding: 60px 0 79px;
     }
     .result-section {
         padding: 63px 0 95px;
@@ -523,7 +624,35 @@ blockquote, p, h1, h2 {
         padding: 43px 41px 50px;
         font-size: 20px;
     }
-    .footer {
+    .upsell-section {
+        padding: 0 0 89px;
+    }
+    .plug-play-wrap {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin-bottom: 95px;
+        justify-content: left;
+    }
+    .plug-play-section {
+        padding: 82px 0 65px;
+    }
+    .plug-play-section .title {
+        padding-bottom: 85px;
+        background-position: 100% calc(100% - 77px);
+    }
+    .plug-play-wrap .description-wrap {
+        order: 1;
+        margin: 0;
+    }
+    .plug-play-img {
+        order: 2;
+    }
+    .plug-play-wrap .description {
+        text-align: left;
+    }
+    .conversion-page .logo-section {
+        padding-bottom: 114px;
+    }
+    .case-study-page .footer {
         margin-top: -170px;
         padding: 220px 0 55px;
     }
