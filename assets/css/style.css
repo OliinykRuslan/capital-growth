@@ -57,7 +57,7 @@ h6 {
     margin: 0;
 }
 .btn,
-.modal-form .btn {
+#mc_embed_signup .modal-form .button.btn {
     font-family: 'Barlow', sans-serif;
     display: block;
     border-radius: 39px;
@@ -66,6 +66,7 @@ h6 {
     line-height: 1;
     font-weight: 600;
     width: 100%;
+    height: auto;
     max-width: 248px;
     border: none;
     color: #303030;
@@ -78,11 +79,24 @@ h6 {
     cursor: pointer;
     transition: .2s all;
 }
+#mc_embed_signup .modal-form .helper_text {
+    padding: 0;
+    margin: 0;
+}
+#mc_embed_signup #mc-embedded-subscribe-form .modal-form div.mce_inline_error {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
 .btn:hover {
     opacity: 1;
     color: #303030;
 }
-.modal-form .btn:hover {
+#mc_embed_signup .modal-form .button.btn:hover {
     background-color: #ffb400;
 }
 .btn::after {
@@ -145,7 +159,6 @@ h6 {
     line-height: 1.5;
 }
 .hero .container {
-    /* max-width: 730px; */
     max-width: 810px;
 }
 .subtitle {
@@ -314,7 +327,6 @@ h6 {
     margin: 0 auto 38px;
 }
 .result-wrap {
-    /* column-count: 2; */
     column-gap: 20px;
 }
 .result-item {
@@ -414,7 +426,7 @@ h6 {
     display: none;
     position: fixed;
     z-index: 3;
-    padding: 10vh 15px 0;
+    padding: 3vh 15px 0;
     left: 0;
     top: 0;
     width: 100%;
@@ -474,7 +486,8 @@ h6 {
     margin: 0 auto;
     max-width: 100%;
 }
-.modal-title {
+#mc_embed_signup .modal-form .modal-title {
+    text-align: center;
     color: #181818;
     font-weight: 700;
     font-size: 20px;
@@ -483,16 +496,19 @@ h6 {
 }
 .modal-body {
     text-align:center;
-    padding: 20px 20px;
+    padding: 20px;
     max-width: 500px;
     margin: 0 auto;
+}
+.modal #mc_embed_signup form {
+    margin: 0;
 }
 .modal-form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
-.modal-form input {
+#mc_embed_signup .modal-form .mc-field-group input {
     width: 100%;
     background-color: #F6F6F6;
     border: 2px solid #DDDDDD;
@@ -500,10 +516,29 @@ h6 {
     font-weight: 500;
     font-size: 18px;
     padding: 17px;
+    text-indent: 0;
 }
-/* .modal-form .btn {
-    margin: 1rem auto 0;
-} */
+#mc_embed_signup .modal-form .mc-field-group,
+#mc_embed_signup .modal-form .mc-field-group.size1of2 {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+#mc_embed_signup .modal-form .mc-field-group.size1of2 {
+    margin-bottom: -20px;
+}
+#mc_embed_signup .modal-form div.response {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+.modal-description {
+    text-align: center;
+    font-size: 13px;
+    line-height: 20px; 
+    padding: 10px 0 0;
+}
 
 @media (min-width: 575px) {
     .header .logo img {
@@ -562,7 +597,7 @@ h6 {
         font-size: 44px;
     }
     .btn,
-    .modal-form .btn  {
+    #mc_embed_signup .modal-form .button.btn  {
         font-size: 22px;
         max-width: 370px;
         padding: 29.5px 17px;
@@ -665,12 +700,13 @@ h6 {
         margin-top: -170px;
         padding: 220px 0 55px;
     }
-    .modal-title {
+    #mc_embed_signup .modal-form .modal-title {
         font-size: 24px;
-        padding: 0 15px 12px;
+        padding: 0 15px;
+        margin: 0;
     }
     .modal-body {
         text-align:center;
-        padding: 29px 20px 58px;
+        padding: 20px 20px 35px;
     }
 }
