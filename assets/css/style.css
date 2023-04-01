@@ -5,6 +5,7 @@
 }
 :root {
     --primary-color: #FFC230;
+    --red-color: #D52917;
 }
 
 iframe, object, embed {
@@ -125,9 +126,6 @@ h6 {
 .underline {
     text-decoration-line: underline;
 }
-.primary {
-    color: var(--primary-color);
-}
 .main_svg[hidden] {
     display: none !important;
 }
@@ -190,6 +188,12 @@ h6 {
     text-align: center;
     margin-top: 0;
     margin-bottom: 20px;
+}
+.primary {
+    color: var(--primary-color);
+}
+.text-red {
+    color: var(--red-color);
 }
 
 /* logo-section */
@@ -271,7 +275,6 @@ h6 {
 .quote-section .btn {
     margin-top: 50px;
 }
-
 .conversion-page .quote-wrap {
     gap: 3.7rem;
 }
@@ -283,7 +286,7 @@ h6 {
 }
 .conversion-page .quote-section .title {
     font-size: 22px;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
 }
 .conversion-page .quote-section {
     font-size: 18px;
@@ -540,6 +543,143 @@ h6 {
     padding: 10px 0 0;
 }
 
+/* case study page */
+
+.free-case-study-page .hero,
+.conversion-magic-page .hero {
+    background-color: #FFF8E7;
+    background-position: 0 0;
+    background-size: 100% 82%;
+    padding: 20px 0 20px;
+}
+.conversion-magic-page .hero {
+    padding: 29px 0 13px;
+}
+.article-pdf {
+    background-color: #FFF8E7;
+    border-bottom: 7px solid #FFE8B1;
+    overflow: hidden;
+}
+.wrap-pdf {
+    position: relative;
+    max-width: 485px;
+    max-height: 290px;
+    margin: 0 auto;
+}
+
+/* strategy-section */
+
+.strategy-section {
+    padding: 30px 0 51px;
+    border-bottom: 1px solid #DBDBDB;
+}
+.strategy-section .container {
+    max-width: 810px;
+}
+.strategy-item:not(:first-child) {
+    margin-top: 85px;
+}
+.strategy-item:not(:first-child) .btn {
+    max-width: 270px;
+}
+.strategy-item:first-child .title {
+    max-width: 620px;
+}
+.strategy-section .title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.4;
+    margin: 0 auto;
+    margin-bottom: 32px;
+}
+.video-wrap {
+    max-width: 780px;
+    margin: 0 auto;
+}
+.strategy-section .video-wrap {
+    margin-bottom: 50px;
+}
+.wrap-strategy {
+    padding: 36px 0 33px;
+    margin: 0 0 40px;
+    display: flex;
+    flex-direction: column;
+    border-top: 4px solid #F6F6F6;
+    border-bottom: 4px solid #F6F6F6;
+    gap: 3.2rem;
+}
+.wrap-strategy img {
+    border-radius: 16px;
+    margin: 0 auto;
+}
+.wrap-strategy .quote {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 1.45;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.wrap-strategy .author-info {
+    margin-top: 19px;
+    margin-bottom: 0;
+    font-size: 18px;
+}
+.strategy-section .description {
+    font-size: 16px;
+    text-align: center;
+    padding: 0 0 35px;
+    line-height: 1.55;
+}
+.strategy-section .quote-ico {
+    max-height: 40px;
+    max-width: 80px;
+}
+.strategy-section .description-txt {
+    max-width: 620px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: underline;
+    line-height: 1.5;
+    margin: 0 auto 30px;
+}
+
+/* conversion-magic-page */
+
+.conversion-magic-page .hero .container {
+    max-width: 940px;
+}
+.conversion-magic-page .wrap-pdf {
+    max-height: 230px;
+}
+.conversion-magic-page .wrap-pdf img {
+    max-width: 100%;
+}
+.conversion-magic-page .upsell-section {
+    padding: 30px 0 70px;
+}
+.conversion-magic-page .upsell-section .title {
+    font-size: 24px;
+    max-width: 750px;
+    margin: 0 auto 39px;
+}
+.conversion-magic-page .logo-woocommerce {
+    max-width: 100%;
+    margin: 0 auto 4px;
+}
+.conversion-magic-page .upsell-revenue-img {
+    margin: 0 auto 30px;
+}
+.conversion-magic-page .description {
+    max-width: 770px;
+    margin: 0 auto 15px;
+    font-size: 16px;
+    line-height: 1.55;
+}
+.conversion-magic-page .description .txt {
+    margin-bottom: 1.75rem;
+}
+
 @media (min-width: 575px) {
     .header .logo img {
         max-width: 160px;
@@ -649,6 +789,7 @@ h6 {
         margin-top: 30px;
         flex-direction: row;
         justify-content: flex-start;
+        align-items: flex-start;
         gap: 1rem;
     }
     .conversion-page .quote-section .title {
@@ -696,6 +837,9 @@ h6 {
     .conversion-page .logo-section {
         padding-bottom: 114px;
     }
+    .free-case-study-page .hero {
+        padding: 43px 0 43px;
+    }
     .case-study-page .footer {
         margin-top: -170px;
         padding: 220px 0 55px;
@@ -708,5 +852,77 @@ h6 {
     .modal-body {
         text-align:center;
         padding: 20px 20px 35px;
+    }
+    .strategy-section {
+        padding: 50px 0 60px;
+    }
+    .strategy-section .title {
+        font-size: 30px;
+    }
+    .wrap-strategy {
+        flex-direction: row;
+    }
+    .wrap-strategy .author-info {
+        margin-top: auto;
+    }
+    .wrap-strategy .quote {
+        font-size: 30px;
+        text-align: left;
+    }
+    .strategy-section .description {
+        font-size: 18px;
+    }
+    .strategy-section .quote-ico {
+        margin: 0 0 27px 0;
+    }
+    .strategy-section .description-txt {
+        font-size: 22px;
+        margin-bottom: 60px;
+    }
+    .free-case-study-page .logo-section {
+        padding-top: 72px;
+        padding-bottom: 112px;
+    }
+    .free-case-study-page .quote-section {
+        padding: 70px 0 123px;
+    }
+    .free-case-study-page .quote-wrap {
+        row-gap: 4.5rem;
+    }
+    .free-case-study-page .quote-section .title {
+        margin-bottom: 58px;
+    }
+    .conversion-magic-page .upsell-section {
+        padding: 53px 0 105px;
+    }
+    .conversion-magic-page .upsell-section .title {
+        font-size: 44px;
+    }
+    .conversion-magic-page .description {
+        font-size: 18px;
+        margin: 0 auto 58px;
+    }
+    .conversion-magic-page .hero {
+        padding: 43px 0 13px;
+    }
+}
+@media (min-width: 992px) {
+    .conversion-magic-page .wrap-pdf {
+        max-height: 300px;
+    }
+    .conversion-magic-page .wrap-pdf img {
+        max-width: 150%;
+        margin-left: -32%;
+    }
+}
+
+@media (max-width: 480px) {
+    .conversion-magic-page .wrap-pdf {
+        max-height: 200px;
+    }
+}
+@media (max-width: 400px) {
+    .conversion-magic-page .wrap-pdf {
+        max-height: 155px;
     }
 }
